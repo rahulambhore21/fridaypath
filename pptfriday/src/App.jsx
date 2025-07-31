@@ -938,7 +938,7 @@ function App() {
 
   // Typewriter effect
   useEffect(() => {
-    const text = "BE READY TO MOST AMAZING FRIDAY PATHSHALA EVER!";
+    const text = "Get Ready for the Most Amazing Friday Pathshala Ever!";
     let i = 0;
     const timer = setInterval(() => {
       if (i < text.length) {
@@ -1194,7 +1194,9 @@ function App() {
           ))}
         </div>
         
-        <div className="text-center z-20 px-4">
+        
+      </section>
+      <div className="text-center z-20 px-4">
           <h1 className="hero-title text-4xl sm:text-6xl md:text-7xl lg:text-9xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent filter drop-shadow-2xl">
             WEB UNLOCKED
           </h1>
@@ -1214,7 +1216,6 @@ function App() {
             <p className="text-sm text-gray-400 mt-4 group-hover:text-white transition-colors">Scroll to explore the magic</p>
           </div>
         </div>
-      </section>
 
       {/* Section 1.5: The Epic Story of the World Wide Web */}
       <section id="section-1-5" className="section min-h-screen py-20 bg-gradient-to-b from-black via-purple-900/50 to-black relative overflow-hidden">
