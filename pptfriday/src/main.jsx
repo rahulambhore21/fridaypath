@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './index.css'
 import App from './App.jsx'
-import EscapeWebGame from './EscapeWebgame.jsx'
+// import EscapeWebGame from './EscapeWebgame.jsx'
 import EscapeGame from './components/EscapeGame.jsx'
 
 const AppRouter = () => {
@@ -11,7 +11,7 @@ const AppRouter = () => {
     <Router>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/game" element={<EscapeWebGame />} />
+        {/* <Route path="/game" element={<EscapeWebGame />} /> */}
         <Route path="/room" element={<EscapeGame />} />
       </Routes>
     </Router>
