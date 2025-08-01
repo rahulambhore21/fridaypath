@@ -85,7 +85,7 @@ const TrickPuzzle = ({ addWord }) => {
     if (trapClicks >= 20) {
       // Ultimate fallback - always reveal after 20 attempts
       setShowRealButton(true)
-      celebrateWin('persistence')
+      celebrateWin('endless')
     } else if (trapClicks >= 15) {
       setCurrentTrick('gigantic')
       setButtonSize(2) // Still big but not impossible

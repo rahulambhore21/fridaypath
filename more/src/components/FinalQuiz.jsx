@@ -38,6 +38,27 @@ const FinalQuiz = () => {
       explanation: "The 'color' property in CSS is used to set the color of text content."
     },
     {
+      question: "Which HTML tag is used to create a hyperlink?",
+      options: ["<link>", "<a>", "<href>", "<url>"],
+      correct: 1,
+      difficulty: "Easy",
+      explanation: "The <a> tag (anchor tag) is used to create hyperlinks in HTML."
+    },
+    {
+      question: "What is the correct CSS syntax to make text bold?",
+      options: ["font-weight: bold;", "text-style: bold;", "font-style: bold;", "text-weight: bold;"],
+      correct: 0,
+      difficulty: "Easy",
+      explanation: "The font-weight property with value 'bold' is used to make text bold in CSS."
+    },
+    {
+      question: "Which JavaScript method is used to add an element to the end of an array?",
+      options: ["append()", "push()", "add()", "insert()"],
+      correct: 1,
+      difficulty: "Easy",
+      explanation: "The push() method adds one or more elements to the end of an array."
+    },
+    {
       question: "What does the 'DOM' stand for in web development?",
       options: [
         "Document Object Model",
@@ -57,6 +78,37 @@ const FinalQuiz = () => {
       explanation: "GET is the HTTP method used to retrieve data from a specified resource."
     },
     {
+      question: "What is the difference between '==' and '===' in JavaScript?",
+      options: [
+        "No difference",
+        "=== checks type and value, == only checks value",
+        "== checks type and value, === only checks value",
+        "=== is for strings, == is for numbers"
+      ],
+      correct: 1,
+      difficulty: "Medium",
+      explanation: "=== performs strict equality comparison (type and value), while == performs loose equality with type coercion."
+    },
+    {
+      question: "Which CSS display property makes an element behave like a table cell?",
+      options: ["table", "table-cell", "cell", "inline-table"],
+      correct: 1,
+      difficulty: "Medium",
+      explanation: "The 'table-cell' value makes an element behave like a <td> element."
+    },
+    {
+      question: "What is the purpose of the 'alt' attribute in HTML img tags?",
+      options: [
+        "To specify image size",
+        "To provide alternative text for accessibility",
+        "To set image alignment",
+        "To define image format"
+      ],
+      correct: 1,
+      difficulty: "Medium",
+      explanation: "The 'alt' attribute provides alternative text for images, improving accessibility for screen readers."
+    },
+    {
       question: "What is the purpose of CSS media queries?",
       options: [
         "To include multimedia content",
@@ -67,6 +119,49 @@ const FinalQuiz = () => {
       correct: 1,
       difficulty: "Hard",
       explanation: "Media queries allow CSS to apply different styles for different media types and screen sizes, enabling responsive design."
+    },
+    {
+      question: "What is a JavaScript closure?",
+      options: [
+        "A function that closes the browser",
+        "A function that has access to variables in its outer scope",
+        "A way to close HTML tags",
+        "A method to terminate loops"
+      ],
+      correct: 1,
+      difficulty: "Hard",
+      explanation: "A closure is a function that has access to variables in its outer (enclosing) scope even after the outer function has returned."
+    },
+    {
+      question: "Which CSS property is used to create a flexbox container?",
+      options: ["display: flexbox;", "display: flex;", "flex: container;", "layout: flex;"],
+      correct: 1,
+      difficulty: "Hard",
+      explanation: "The 'display: flex' property creates a flex container, enabling flexbox layout for its children."
+    },
+    {
+      question: "What is the purpose of the 'async' keyword in JavaScript?",
+      options: [
+        "To make functions run faster",
+        "To create asynchronous functions that return promises",
+        "To synchronize multiple functions",
+        "To handle errors automatically"
+      ],
+      correct: 1,
+      difficulty: "Hard",
+      explanation: "The 'async' keyword creates asynchronous functions that implicitly return promises and can use 'await'."
+    },
+    {
+      question: "What is the CSS box model?",
+      options: [
+        "A way to create boxes in HTML",
+        "The rectangular layout model including content, padding, border, and margin",
+        "A JavaScript object for styling",
+        "A method to organize CSS files"
+      ],
+      correct: 1,
+      difficulty: "Hard",
+      explanation: "The CSS box model describes the rectangular boxes generated for elements, consisting of content, padding, border, and margin areas."
     }
   ]
 
@@ -264,7 +359,7 @@ const FinalQuiz = () => {
                 <div className="space-y-3">
                   <div className="flex items-center">
                     <span className="text-2xl mr-3">📝</span>
-                    <span>5 challenging questions</span>
+                    <span>15 challenging questions</span>
                   </div>
                   <div className="flex items-center">
                     <span className="text-2xl mr-3">⏱️</span>
