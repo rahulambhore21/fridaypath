@@ -118,7 +118,7 @@ const SourcePuzzle = ({ addWord }) => {
     }
 
     // Add hidden comment to actual DOM
-    const comment = document.createComment(' CLASSIFIED_PAYLOAD: unlock ')
+    const comment = document.createComment(' CLASSIFIED_PAYLOAD: the ')
     document.head.appendChild(comment)
 
     // Pulse effect
@@ -479,45 +479,7 @@ const SourcePuzzle = ({ addWord }) => {
 
           {/* Hacking Interface */}
           <div className="max-w-4xl mx-auto mt-8">
-            <div className="bg-black/70 backdrop-blur-lg rounded-2xl p-8 border-2 border-red-500/50">
-              <h3 className="text-2xl font-bold text-center mb-6 text-white">
-                EXECUTE BREACH PROTOCOL
-              </h3>
-              
-              {hackingProgress > 0 && !found && (
-                <div className="mb-6">
-                  <div className="bg-gray-700 rounded-full h-4 overflow-hidden">
-                    <div 
-                      className="bg-gradient-to-r from-red-500 to-green-500 h-full transition-all duration-300"
-                      style={{ width: `${hackingProgress}%` }}
-                    />
-                  </div>
-                  <p className="text-center text-green-400 mt-2 font-mono">
-                    DECRYPTION: {Math.floor(hackingProgress)}%
-                  </p>
-                </div>
-              )}
-              
-              <div className="text-center">
-                <button
-                  onClick={handleFoundWord}
-                  className="group relative bg-gradient-to-r from-red-600 via-purple-600 to-cyan-600 px-12 py-6 rounded-xl font-black text-xl transition-all duration-300 transform hover:scale-110 hover:shadow-2xl text-white border-2 border-white/30 overflow-hidden"
-                  style={{
-                    animation: found ? 'none' : 'pulse 2s infinite',
-                    transform: `scale(${pulseIntensity})`
-                  }}
-                >
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
-                  <span className="relative flex items-center">
-                    {found ? '🔓' : '💥'} 
-                    {found ? 'SYSTEM BREACHED!' : 'INITIATE BREACH'}
-                    <span className="ml-2 group-hover:translate-x-2 transition-transform">
-                      {found ? '✅' : '⚡'}
-                    </span>
-                  </span>
-                </button>
-              </div>
-            </div>
+           
 
             {found && decryptionPhase >= 2 && (
               <div className="mt-8 p-8 bg-gradient-to-r from-green-900 via-cyan-900 to-purple-900 rounded-2xl border-4 border-green-400 relative overflow-hidden">

@@ -15,7 +15,7 @@ const TerminalPuzzle = ({ addWord }) => {
     '   ██║   ██║  ██║██║ ╚═╝ ██║██║██║ ╚████║██║  ██║███████╗',
     '   ╚═╝   ╚═╝  ╚═╝╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝╚══════╝',
     '',
-    '🚀 EscapeWeb Terminal v2.1.0 - Quantum Edition',
+    '🚀 endlessWeb Terminal v2.1.0 - Quantum Edition',
     '⚡ System Status: ONLINE | Security Level: MAXIMUM',
     '🔐 Access Level: RESTRICTED | User: puzzle_solver',
     '',
@@ -110,7 +110,7 @@ const TerminalPuzzle = ({ addWord }) => {
   }
 
   const executeCommand = (cmd) => {
-    const newOutput = [...output, `user@escapeWeb:~$ ${cmd}`]
+    const newOutput = [...output, `user@endlessWeb:~$ ${cmd}`]
     
     // Add to command history
     if (cmd.trim()) {
@@ -153,7 +153,7 @@ const TerminalPuzzle = ({ addWord }) => {
       case 'pwd':
         newOutput.push(
           '📍 Current Directory:',
-          '/home/user/escape-web/terminal-puzzle',
+          '/home/user/endless-web/terminal-puzzle',
           ''
         )
         break
@@ -191,7 +191,7 @@ const TerminalPuzzle = ({ addWord }) => {
       
       case 'clear':
         setOutput([
-          '🚀 EscapeWeb Terminal v2.1.0 - Quantum Edition',
+          '🚀 endlessWeb Terminal v2.1.0 - Quantum Edition',
           '⚡ Terminal cleared by user request',
           ''
         ])
@@ -231,7 +231,7 @@ const TerminalPuzzle = ({ addWord }) => {
       case correctCommand:
         if (!solved) {
           setSolved(true)
-          addWord('escape')
+          addWord('endless')
           newOutput.push(
             '🔓 AUTHENTICATION SUCCESSFUL!',
             '████████████████████████████████████',
@@ -239,7 +239,7 @@ const TerminalPuzzle = ({ addWord }) => {
             '████████████████████████████████████',
             '',
             '🎉 CONGRATULATIONS! Security bypass complete!',
-            '✨ Hidden word revealed: "escape"',
+            '✨ Hidden word revealed: "endless"',
             '� Progress: Word 6/6 collected!',
             '🏆 Achievement unlocked: Terminal Master',
             '',
@@ -378,10 +378,10 @@ const TerminalPuzzle = ({ addWord }) => {
               <div className="w-3 h-3 bg-green-500 rounded-full"></div>
             </div>
             <div className="text-green-400 text-sm font-bold">
-              🖥️ EscapeWeb Terminal - Quantum Edition
+              🖥️ endlessWeb Terminal - Quantum Edition
             </div>
             <div className="text-green-400 text-xs">
-              user@escapeWeb:~
+              user@endlessWeb:~
             </div>
           </div>
           
@@ -396,7 +396,7 @@ const TerminalPuzzle = ({ addWord }) => {
             ))}
             
             <form onSubmit={handleSubmit} className="flex items-center">
-              <span className="text-green-400 mr-2 font-bold">user@escapeWeb:~$</span>
+              <span className="text-green-400 mr-2 font-bold">user@endlessWeb:~$</span>
               <input
                 type="text"
                 value={command}
@@ -428,7 +428,7 @@ const TerminalPuzzle = ({ addWord }) => {
             <div className="text-6xl mb-4 animate-bounce">🏆</div>
             <h3 className="text-4xl font-bold text-green-400 mb-3">TERMINAL MASTERY ACHIEVED!</h3>
             <p className="text-xl text-green-300 mb-3">
-              Final word collected: <span className="font-bold text-yellow-300 text-2xl">"escape"</span>
+              Final word collected: <span className="font-bold text-yellow-300 text-2xl">"endless"</span>
             </p>
             <div className="inline-block bg-yellow-600 text-black px-6 py-3 rounded-full font-bold text-lg animate-pulse">
               ✨ ALL 6 WORDS FOUND! Navigate to the final challenge! ✨
@@ -446,7 +446,7 @@ const TerminalPuzzle = ({ addWord }) => {
           </Link>
           
           <div className="text-green-600 text-sm bg-green-900/20 p-4 rounded-lg">
-            <p className="mb-2">🔑 <strong>Cheat Code:</strong> unlock --access gateway</p>
+            <p className="mb-2"> <strong>Cheat Code:</strong> unlock --access gateway</p>
             <p>� <strong>Pro Tip:</strong> Real terminals support command history and auto-completion!</p>
           </div>
         </div>

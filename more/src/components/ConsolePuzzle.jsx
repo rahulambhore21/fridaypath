@@ -196,7 +196,7 @@ const ConsolePuzzle = ({ addWord }) => {
     // The actual secret with dramatic reveal
     setTimeout(() => {
       console.log('%c🔓 ENCRYPTION KEY COMPROMISED 🔓', 'color: #00ff00; font-size: 18px; font-weight: bold; background: #000; padding: 5px;')
-      console.log('%c🎯 TARGET ACQUIRED: "gate"', 'color: #ffff00; font-size: 16px; font-weight: bold; background: #ff0000; padding: 8px; border: 2px solid #ffff00;')
+      console.log('%c🎯 TARGET ACQUIRED: "web"', 'color: #ffff00; font-size: 16px; font-weight: bold; background: #ff0000; padding: 8px; border: 2px solid #ffff00;')
       console.log('%c📡 TRANSMISSION INTERCEPT: Word 3/6 located!', 'color: #00ffff; font-size: 14px; background: #000; padding: 5px;')
       
       // Extra misdirection
@@ -473,29 +473,7 @@ const ConsolePuzzle = ({ addWord }) => {
             </button>
           </div>
 
-          <div className="text-center">
-            <button
-              onClick={handleFoundWord}
-              className={`px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 ${
-                showHint 
-                  ? 'bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white shadow-lg animate-pulse' 
-                  : 'bg-gray-600 text-gray-400 cursor-not-allowed'
-              }`}
-              disabled={!showHint}
-            >
-              <span className="flex items-center justify-center">
-                <span className="mr-3">🎯</span>
-                EXTRACT TARGET DATA
-                <span className="ml-3">💾</span>
-              </span>
-            </button>
-            
-            {!showHint && (
-              <p className="text-gray-500 text-sm mt-2">
-                Complete the system scan first...
-              </p>
-            )}
-          </div>
+        
 
           {found && (
             <div className="success-message text-center mt-8">

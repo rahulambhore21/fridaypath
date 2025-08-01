@@ -4,7 +4,6 @@ import { gsap } from 'gsap'
 import soundManager from '../utils/soundManager'
 import SettingsPanel from './SettingsPanel'
 import CompetitionModal from './CompetitionModal'
-import Leaderboard from './Leaderboard'
 import { useCompetition } from '../context/CompetitionContext'
 
 const HomePage = ({ collectedWords }) => {
@@ -193,15 +192,6 @@ const HomePage = ({ collectedWords }) => {
       icon: '🔍',
       color: 'from-green-500 to-emerald-600',
       bgColor: 'bg-gradient-to-br from-green-900/20 to-emerald-900/20',
-      difficulty: 'Easy'
-    },
-    { 
-      path: '/hover', 
-      name: 'Design in Motion', 
-      description: 'Try interacting with elements', 
-      icon: '✨',
-      color: 'from-pink-500 to-purple-600',
-      bgColor: 'bg-gradient-to-br from-pink-900/20 to-purple-900/20',
       difficulty: 'Easy'
     },
     { 
@@ -486,25 +476,9 @@ const HomePage = ({ collectedWords }) => {
         </footer>
       </div>
 
-      {/* Settings Panel */}
-      <SettingsPanel 
-        isOpen={showSettings} 
-        onClose={closeSettings} 
-        collectedWords={collectedWords} 
-      />
-
+     
       {/* Competition Modal */}
-      <CompetitionModal
-        isOpen={showCompetition}
-        onClose={closeCompetition}
-        onStart={handleStartCompetition}
-      />
-
-      {/* Leaderboard Modal */}
-      <Leaderboard
-        isOpen={showLeaderboard}
-        onClose={closeLeaderboard}
-      />
+      
     </div>
   )
 }

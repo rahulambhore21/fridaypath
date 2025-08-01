@@ -31,7 +31,7 @@ const RoutingPuzzle = ({ addWord }) => {
   const collectWord = () => {
     if (!found) {
       setFound(true)
-      addWord('web')
+      addWord('to')
       setShowModal(false)
     }
   }
@@ -129,7 +129,7 @@ const RoutingPuzzle = ({ addWord }) => {
         {found && (
           <div className="text-center mb-8 p-4 bg-green-600 rounded-lg">
             <h3 className="text-xl font-bold">🎉 Perfect Navigation!</h3>
-            <p>You found the word: <strong>"web"</strong></p>
+            <p>You found the word: <strong>"to"</strong></p>
             <p className="text-sm mt-2">Word 5/6 collected!</p>
           </div>
         )}
@@ -154,7 +154,7 @@ const RoutingPuzzle = ({ addWord }) => {
             </p>
             <div className="bg-yellow-900 p-4 rounded mb-4">
               <p className="text-yellow-300 text-center font-bold">
-                Hidden Word: "web"
+                Hidden Word: "to"
               </p>
             </div>
             <div className="text-center">

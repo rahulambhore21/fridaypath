@@ -57,11 +57,11 @@ const HiddenPuzzle = ({ addWord }) => {
 
   const handleHiddenButtonClick = () => {
     setFound(true)
-    addWord('hidden')
+    addWord('discovery')
     soundManager.playSuccess()
     
     if (isCompetitionMode) {
-      completePuzzle('hidden')
+      completePuzzle('discovery')
     }
     
     createCelebration()
@@ -135,11 +135,11 @@ const HiddenPuzzle = ({ addWord }) => {
                 <button
                   ref={hiddenButtonRef}
                   onClick={handleHiddenButtonClick}
-                  className="absolute top-4 left-4 px-4 py-2 font-bold text-lg rounded-xl shadow-lg transition-all duration-300"
+                  className="absolute top-4 left-4 px-4 py-2 font-bold text-lg rounded-xl  transition-all duration-300"
                   style={{ 
                     backgroundColor: 'rgb(31, 41, 55)', // Same as bg-gray-800
                     color: 'rgb(31, 41, 55)', // Same as background, making text invisible
-                    border: '2px solid rgb(31, 41, 55)' // Same border color
+                   
                   }}
                   title="Real Button"
                 >

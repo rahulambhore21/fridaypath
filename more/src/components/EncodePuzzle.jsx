@@ -8,9 +8,9 @@ const EncodePuzzle = ({ addWord }) => {
   const [decoded, setDecoded] = useState(false)
   const [attempts, setAttempts] = useState(0)
 
-  // Base64 encoded word "fire" = "ZmlyZQ=="
-  const encodedMessage = "ZmlyZQ=="
-  const correctAnswer = "fire"
+  // Base64 encoded word "unlock" = "dW5sb2Nr"
+  const encodedMessage = "dW5sb2Nr"
+  const correctAnswer = "unlock"
 
   useEffect(() => {
     gsap.fromTo(containerRef.current,
@@ -25,7 +25,7 @@ const EncodePuzzle = ({ addWord }) => {
     
     if (userInput.toLowerCase().trim() === correctAnswer) {
       setDecoded(true)
-      addWord('fire')
+      addWord('unlock')
       gsap.fromTo('.success-message',
         { scale: 0, rotation: 180 },
         { scale: 1, rotation: 0, duration: 0.8, ease: 'elastic.out(1, 0.3)' }
@@ -74,11 +74,11 @@ const EncodePuzzle = ({ addWord }) => {
               </div>
               <div className="bg-gray-700 p-4 rounded">
                 <h4 className="font-semibold text-blue-400 mb-2">Method 2: Browser Console</h4>
-                <p className="text-sm text-gray-300">Use: atob("ZmlyZQ==")</p>
+                <p className="text-sm text-gray-300">Use: atob("dW5sb2Nr")</p>
               </div>
               <div className="bg-gray-700 p-4 rounded">
                 <h4 className="font-semibold text-blue-400 mb-2">Method 3: Terminal</h4>
-                <p className="text-sm text-gray-300">echo "ZmlyZQ==" | base64 -d</p>
+                <p className="text-sm text-gray-300">echo "dW5sb2Nr" | base64 -d</p>
               </div>
             </div>
           </div>
@@ -128,7 +128,7 @@ const EncodePuzzle = ({ addWord }) => {
           {decoded && (
             <div className="success-message text-center p-4 bg-green-600 rounded-lg">
               <h3 className="text-xl font-bold">🎉 Message Decoded!</h3>
-              <p>You found the word: <strong>"fire"</strong></p>
+              <p>You found the word: <strong>"unlock"</strong></p>
               <p className="text-sm mt-2">Word 4/6 collected!</p>
             </div>
           )}
