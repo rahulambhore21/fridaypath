@@ -152,7 +152,7 @@ const SourcePuzzle = ({ addWord }) => {
     <title>CLASSIFIED SYSTEM</title>`,
       `    <!-- SCANNING FOR ANOMALIES... -->
     <!-- DETECTING HIDDEN PAYLOADS... -->
-    <!-- CLASSIFIED_PAYLOAD: unlock -->`,
+    <!-- CLASSIFIED_PAYLOAD: the -->`,
       `    <link rel="stylesheet" href="security.css">
   </head>
   <body class="encrypted">

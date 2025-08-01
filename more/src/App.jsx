@@ -56,7 +56,7 @@ function App() {
             <Route path="/terminal" element={<TerminalPuzzle addWord={addWord} />} />
             <Route path="/trick" element={<TrickPuzzle addWord={addWord} />} />
             <Route path="/hidden" element={<HiddenPuzzle addWord={addWord} />} />
-            <Route path="/the-web-unlocks-doors-to-endless-discovery" element={
+            <Route path="/the-web-unlock-doors-to-endless-discovery" element={
                <FinalQuiz />  
             } />
             <Route path="/404" element={<NotFound />} />

@@ -31,7 +31,7 @@ const HiddenPuzzle = ({ addWord }) => {
 
   useEffect(() => {
     if (isCompetitionMode) {
-      startPuzzle('hidden')
+      startPuzzle('discovery')
     }
 
     // Setup the initial animations
@@ -99,7 +99,7 @@ const HiddenPuzzle = ({ addWord }) => {
 
   return (
     <div ref={containerRef} className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 p-8 relative overflow-hidden">
-      {isCompetitionMode && <CompetitionTimer timeLimit={120} onTimeUp={handleTimeUp} puzzleId="hidden" />}
+      {isCompetitionMode && <CompetitionTimer timeLimit={120} onTimeUp={handleTimeUp} puzzleId="discovery" />}
       
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-8">
@@ -171,7 +171,7 @@ const HiddenPuzzle = ({ addWord }) => {
               <div className="mt-8 p-6 bg-green-900/30 border border-green-500/50 rounded-2xl">
                 <h3 className="text-2xl font-bold text-green-400 mb-2">🎉 Found the Hidden Treasure!</h3>
                 <p className="text-green-300">
-                  You've discovered the art of finding hidden elements! The word "hidden" has been added to your collection.
+                  You've discovered the art of finding hidden elements! The word "discovery" has been added to your collection.
                 </p>
               </div>
             )}

@@ -355,42 +355,7 @@ const HomePage = ({ collectedWords }) => {
           </div>
           
           {/* Enhanced Progress Section */}
-          <div className="bg-gray-800/60 backdrop-blur-lg rounded-2xl p-6 mb-8 border border-gray-700/50">
-            <div className="text-xl text-yellow-400 mb-4 font-semibold">
-              Progress: {collectedWords.length}/6 Words Collected
-            </div>
-            
-            {/* Progress Bar */}
-            <div className="w-full bg-gray-700 rounded-full h-3 mb-6 overflow-hidden">
-              <div 
-                className="bg-gradient-to-r from-green-400 to-cyan-400 h-3 rounded-full transition-all duration-1000 ease-out relative"
-                style={{ width: `${(collectedWords.length / 6) * 100}%` }}
-              >
-                <div className="absolute inset-0 bg-white/20 animate-pulse"></div>
-              </div>
-            </div>
-
-            {collectedWords.length > 0 && (
-              <div className="flex flex-wrap justify-center gap-3 mb-6">
-                {collectedWords.map((word, index) => (
-                  <div
-                    key={index}
-                    className="bg-gradient-to-r from-green-500 to-emerald-500 px-4 py-2 rounded-full text-sm font-bold text-white shadow-lg transform hover:scale-105 transition-all duration-200 animate-bounce"
-                    style={{ animationDelay: `${index * 0.1}s` }}
-                  >
-                    ✨ {word}
-                  </div>
-                ))}
-              </div>
-            )}
-
-            {collectedWords.length === 6 && (
-              <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black p-6 rounded-2xl font-bold text-xl animate-pulse shadow-2xl">
-                🎉 ALL WORDS COLLECTED! 🎉
-                <div className="text-lg mt-2">Navigate to: <code className="bg-black/20 px-2 py-1 rounded">/unlock-the-gate</code></div>
-              </div>
-            )}
-          </div>
+          
         </header>
 
         <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -462,14 +427,7 @@ const HomePage = ({ collectedWords }) => {
               <div>
                 <p className="text-lg mb-2">🎯 Solve each puzzle to collect hidden words</p>
                 <p className="text-sm">Combine them to unlock the final challenge!</p>
-                <div className="mt-4 pt-4 border-t border-gray-600">
-                  <button
-                    onClick={openCompetition}
-                    className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 text-white"
-                  >
-                    🏆 Start Competition Mode
-                  </button>
-                </div>
+                
               </div>
             )}
           </div>
