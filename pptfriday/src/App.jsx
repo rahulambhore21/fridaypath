@@ -1145,77 +1145,182 @@ function App() {
         </div>
       )}
 
-      {/* Section 1: Epic Intro with Spline 3D Earth */}
+      {/* Section 1: Epic Hero Section */}
       <section id="section-0" className="section min-h-screen relative flex items-center justify-center bg-gradient-to-br from-purple-900 via-blue-900 to-black overflow-hidden">
-        {/* Spline 3D Holographic Earth Background */}
-        <div className="absolute inset-0 z-0">
-          <iframe 
-            src='https://my.spline.design/holographicearthwithdynamiclines-6svxoF5TqPjGkIhhgGUVVVwh/' 
-            frameBorder='0' 
-            width='100%' 
-            height='100%'
-            className="opacity-70"
-            style={{ filter: 'brightness(0.8) contrast(1.2)' }}
-          />
-        </div>
-
         {/* Animated Background Grid */}
-        <div className="absolute inset-0 z-5">
+        <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent animate-pulse"></div>
           {[...Array(20)].map((_, i) => (
             <div
               key={i}
-              className="absolute w-px h-full bg-gradient-to-b from-transparent via-cyan-500/20 to-transparent"
+              className="absolute w-px h-full bg-gradient-to-b from-transparent via-cyan-500/20 to-transparent animate-pulse"
               style={{ left: `${i * 5}%`, animationDelay: `${i * 0.1}s` }}
             />
           ))}
           {[...Array(20)].map((_, i) => (
             <div
               key={i}
-              className="absolute w-full h-px bg-gradient-to-r from-transparent via-purple-500/20 to-transparent"
+              className="absolute w-full h-px bg-gradient-to-r from-transparent via-purple-500/20 to-transparent animate-pulse"
               style={{ top: `${i * 5}%`, animationDelay: `${i * 0.1}s` }}
             />
           ))}
         </div>
 
         {/* Floating Orbs */}
-        <div className="absolute inset-0 z-10">
-          {[...Array(10)].map((_, i) => (
+        <div className="absolute inset-0 z-5">
+          {[...Array(15)].map((_, i) => (
             <div
               key={i}
-              className="absolute w-20 h-20 bg-gradient-to-r from-cyan-400/20 to-purple-400/20 rounded-full blur-xl animate-pulse"
+              className="absolute animate-float opacity-30"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
-                animationDelay: `${i * 0.5}s`,
-                animationDuration: `${3 + Math.random() * 2}s`
+                animationDelay: `${i * 0.3}s`,
+                animationDuration: `${4 + Math.random() * 6}s`
               }}
-            />
+            >
+              <div className={`w-${[8, 12, 16, 20][Math.floor(Math.random() * 4)]} h-${[8, 12, 16, 20][Math.floor(Math.random() * 4)]} bg-gradient-to-r from-cyan-400/30 to-purple-400/30 rounded-full blur-sm`}></div>
+            </div>
           ))}
         </div>
-        
-        
-      </section>
-      <div className="text-center z-20 px-4">
-          <h1 className="hero-title text-4xl sm:text-6xl md:text-7xl lg:text-9xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent filter drop-shadow-2xl">
-            WEB UNLOCKED
-          </h1>
-          <p className="hero-subtitle text-lg sm:text-xl md:text-2xl lg:text-3xl mb-8 text-gray-300 font-light tracking-wide">
-            TECHNICAL COUNCIL VIT 
-          </p>
-          <div className="hero-question text-base sm:text-lg md:text-xl mb-12 p-6 sm:p-8 bg-white/10 backdrop-blur-md rounded-2xl border border-white/30 shadow-2xl hover:scale-105 transition-all duration-500">
-            <Globe className="inline-block mr-3 text-cyan-400 animate-spin" size={28} />
-            <span className="text-cyan-300 font-semibold">{typedText}<span className="animate-pulse">|</span></span>
+
+        {/* Floating Tech Icons */}
+        <div className="absolute inset-0 z-5">
+          {[
+            { icon: '🌐', delay: 0 },
+            { icon: '💻', delay: 1 },
+            { icon: '⚡', delay: 2 },
+            { icon: '🚀', delay: 3 },
+            { icon: '🔗', delay: 4 },
+            { icon: '🎨', delay: 5 },
+            { icon: '⚙️', delay: 6 },
+            { icon: '📱', delay: 7 }
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="absolute text-4xl opacity-20 animate-float"
+              style={{
+                left: `${10 + (i % 4) * 25}%`,
+                top: `${15 + Math.floor(i / 4) * 70}%`,
+                animationDelay: `${item.delay * 0.5}s`,
+                animationDuration: `${6 + Math.random() * 4}s`
+              }}
+            >
+              {item.icon}
+            </div>
+          ))}
+        </div>
+
+        {/* Main Content */}
+        <div className="text-center z-20 px-4 relative max-w-7xl mx-auto">
+          {/* Hero Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-md rounded-full border border-white/20 animate-pulse">
+            <Star className="w-4 h-4 text-yellow-400" />
+            <span className="text-sm font-medium text-white">Friday Pathshala Special Session</span>
+            <Star className="w-4 h-4 text-yellow-400" />
+          </div>
+
+          <div className="relative mb-8">
+            {/* Multi-layered glowing background */}
+            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/30 via-purple-500/30 to-pink-500/30 rounded-full blur-3xl scale-150 animate-pulse"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 via-indigo-500/20 to-purple-500/20 rounded-full blur-2xl scale-125 animate-pulse" style={{ animationDelay: '1s' }}></div>
+            
+            <h1 className="hero-title relative text-4xl sm:text-6xl md:text-7xl lg:text-9xl font-bold mb-4 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-gradient gpu-accelerated">
+              WEB UNLOCKED
+            </h1>
+            
+            <div className="absolute -inset-4 bg-gradient-to-r from-cyan-400/20 via-purple-400/20 to-pink-400/20 blur-xl rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           </div>
           
-          <div className="animate-bounce cursor-pointer group" onClick={scrollToNext}>
-            <div className="relative">
-              <ChevronDown size={60} className="mx-auto text-white/60 group-hover:text-white transition-colors group-hover:scale-125 transform duration-300" />
-              <div className="absolute inset-0 bg-cyan-400/20 rounded-full blur-xl group-hover:blur-2xl transition-all duration-300"></div>
+          <div className="mb-8">
+            <p className="hero-subtitle text-lg sm:text-xl md:text-2xl lg:text-3xl mb-4 text-gray-300 font-light tracking-wide">
+              TECHNICAL COUNCIL VIT 
+            </p>
+            <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-400 mx-auto rounded-full"></div>
+          </div>
+          
+          {/* Enhanced typewriter section */}
+          <div className="hero-question text-base sm:text-lg md:text-xl mb-12 p-6 sm:p-8 bg-white/10 backdrop-blur-md rounded-2xl border border-white/30 shadow-2xl hover:scale-105 hover:shadow-cyan-500/20 transition-all duration-500 max-w-4xl mx-auto group">
+            <div className="flex items-center justify-center mb-4">
+              <Globe className="mr-3 text-cyan-400 animate-spin" size={32} />
+              <span className="text-cyan-300 font-semibold text-xl">Welcome to Web Unlocked!</span>
+              <Globe className="ml-3 text-purple-400 animate-spin" size={32} style={{ animationDirection: 'reverse' }} />
             </div>
-            <p className="text-sm text-gray-400 mt-4 group-hover:text-white transition-colors">Scroll to explore the magic</p>
+            <div className="text-gray-300">
+              <span className="text-cyan-300 font-semibold">{typedText}</span>
+              <span className="animate-pulse text-cyan-400 font-bold">|</span>
+            </div>
+            <div className="mt-4 flex items-center justify-center gap-2 text-sm text-gray-400">
+              <span>🚀</span>
+              <span>Interactive</span>
+              <span>•</span>
+              <span>🎯</span>
+              <span>Comprehensive</span>
+              <span>•</span>
+              <span>⚡</span>
+              <span>Engaging</span>
+            </div>
+          </div>
+
+          {/* Enhanced feature highlights */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-16 max-w-5xl mx-auto">
+            <div className="group bg-gradient-to-br from-blue-900/30 to-cyan-900/30 backdrop-blur-md p-6 rounded-2xl border border-blue-500/30 hover:border-blue-400/60 hover:scale-110 transition-all duration-500 hover:shadow-blue-500/20 shadow-2xl">
+              <div className="text-4xl mb-4 group-hover:animate-bounce">🎯</div>
+              <h3 className="font-bold text-white text-lg mb-2">Interactive Learning</h3>
+              <p className="text-gray-300 text-sm leading-relaxed">Experience hands-on demos, live coding sessions, and real-time simulations</p>
+              <div className="mt-4 h-1 w-full bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full opacity-50 group-hover:opacity-100 transition-opacity"></div>
+            </div>
+            
+            <div className="group bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-md p-6 rounded-2xl border border-purple-500/30 hover:border-purple-400/60 hover:scale-110 transition-all duration-500 hover:shadow-purple-500/20 shadow-2xl">
+              <div className="text-4xl mb-4 group-hover:animate-bounce">🌟</div>
+              <h3 className="font-bold text-white text-lg mb-2">Complete Guide</h3>
+              <p className="text-gray-300 text-sm leading-relaxed">From HTML basics to advanced concepts, covering everything you need to know</p>
+              <div className="mt-4 h-1 w-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-50 group-hover:opacity-100 transition-opacity"></div>
+            </div>
+            
+            <div className="group bg-gradient-to-br from-green-900/30 to-emerald-900/30 backdrop-blur-md p-6 rounded-2xl border border-green-500/30 hover:border-green-400/60 hover:scale-110 transition-all duration-500 hover:shadow-green-500/20 shadow-2xl">
+              <div className="text-4xl mb-4 group-hover:animate-bounce">🚀</div>
+              <h3 className="font-bold text-white text-lg mb-2">Real Examples</h3>
+              <p className="text-gray-300 text-sm leading-relaxed">Live code demonstrations and practical examples you can try immediately</p>
+              <div className="mt-4 h-1 w-full bg-gradient-to-r from-green-500 to-emerald-500 rounded-full opacity-50 group-hover:opacity-100 transition-opacity"></div>
+            </div>
+          </div>
+
+          {/* Call to action section */}
+          <div className="mb-12">
+            <p className="text-xl text-gray-300 mb-6 max-w-3xl mx-auto leading-relaxed">
+              Ready to unlock the secrets of the web? Join us on an incredible journey through the digital universe! 🌌
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-400">
+              <div className="flex items-center gap-2">
+                <Users className="w-4 h-4" />
+                <span>500+ Students</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <BookOpen className="w-4 h-4" />
+                <span>100+ Concepts</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Award className="w-4 h-4" />
+                <span>Certificate Ready</span>
+              </div>
+            </div>
+          </div>
+          
+          {/* Enhanced scroll indicator */}
+          <div className="animate-bounce cursor-pointer group" onClick={scrollToNext}>
+            <div className="relative inline-flex items-center justify-center">
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/30 to-purple-400/30 rounded-full blur-xl group-hover:blur-2xl transition-all duration-300 scale-150"></div>
+              <div className="relative flex flex-col items-center p-4 bg-white/5 backdrop-blur-md rounded-full border border-white/20 group-hover:border-white/40 transition-all duration-300">
+                <ChevronDown size={32} className="text-white/60 group-hover:text-white transition-colors group-hover:scale-125 transform duration-300" />
+                <div className="mt-2 text-xs text-gray-400 group-hover:text-white transition-colors font-medium">
+                  Start Journey
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+      </section>
 
       {/* Section 1.5: The Epic Story of the World Wide Web */}
       <section id="section-1-5" className="section min-h-screen py-20 bg-gradient-to-b from-black via-purple-900/50 to-black relative overflow-hidden">
