@@ -33,7 +33,7 @@ const TrickPuzzle = ({ addWord }) => {
 
   const hints = [
     "Not all buttons are created equal. Some are more... slippery than others.",
-    "Sometimes patience wins over persistence. Try different strategies!",
+    "Sometimes patience wins over endless. Try different strategies!",
     "Corner the button systematically - it might give up eventually.",
     "What if you click really, really fast? Or maybe really, really slow?",
     "Try the konami code: ↑↑↓↓←→←→BA (arrow keys then B,A keys)",
@@ -251,7 +251,7 @@ const TrickPuzzle = ({ addWord }) => {
     if (!found) {
       setFound(true)
       setShowSecretWin(method)
-      addWord('persistence')
+      addWord('endless')
       
       if (isCompetitionMode) {
         completePuzzle('trick', 'genius')
@@ -279,7 +279,7 @@ const TrickPuzzle = ({ addWord }) => {
   const handleRealButtonClick = () => {
     if (!found) {
       setFound(true)
-      addWord('persistence')
+      addWord('endless')
       
       if (isCompetitionMode) {
         completePuzzle('trick', 'master')
@@ -326,7 +326,7 @@ const TrickPuzzle = ({ addWord }) => {
       case 'patience': return '🧘 ZEN MASTER! You won by doing absolutely nothing!'
       case 'cornering': return '🏹 STRATEGIC GENIUS! You cornered the button systematically!'
       case 'rapidfire': return '⚡ SPEED DEMON! Your rapid-fire clicking overwhelmed the button!'
-      case 'persistence': return '💪 ULTIMATE PERSISTENCE! You outlasted every trick!'
+      case 'endless': return '💪 ULTIMATE endless! You outlasted every trick!'
       default: return '🏆 CHAMPION! You conquered the trickster button!'
     }
   }
@@ -382,7 +382,7 @@ const TrickPuzzle = ({ addWord }) => {
               🎭 The Multi-Solution Trickster
             </h1>
             <p className="text-2xl text-gray-300 mb-4 font-light">
-              Multiple ways to win! Persistence, patience, strategy, or secrets!
+              Multiple ways to win! endless, patience, strategy, or secrets!
             </p>
             <div className="text-sm text-red-300 bg-red-900/30 px-4 py-2 rounded-full inline-block">
               Status: {getTrickDescription()}
@@ -416,7 +416,7 @@ const TrickPuzzle = ({ addWord }) => {
                 
                 <div className="bg-purple-900/30 border-l-4 border-purple-500 p-3 rounded">
                   <p className="text-purple-200 text-sm">
-                    🧘 <strong>Zen Mode:</strong> Sometimes patience wins over persistence
+                    🧘 <strong>Zen Mode:</strong> Sometimes patience wins over endless
                   </p>
                 </div>
                 
@@ -572,7 +572,7 @@ const TrickPuzzle = ({ addWord }) => {
               </h3>
               <p className="text-xl text-green-100 mb-4">
                 You've earned the word: 
-                <span className="font-bold text-yellow-300 text-2xl"> "PERSISTENCE"</span>
+                <span className="font-bold text-yellow-300 text-2xl"> "endless"</span>
               </p>
               <div className="inline-block bg-green-800 px-6 py-3 rounded-full text-lg font-semibold">
                 🎭 Victory Achieved! 🎭
